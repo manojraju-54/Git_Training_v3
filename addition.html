@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    here we are going to add two numbers
+    <body>
+        <h1>Addition of Two Numbers</h1>
+        <form id="additionForm">
+            <label for="num1">Number 1:</label>
+            <input type="number" id="num1" name="num1" required>
+            <br><br>
+            <label for="num2">Number 2:</label>
+            <input type="number" id="num2" name="num2" required>
+            <br><br>
+            <button type="button" onclick="addNumbers()">Add</button>
+        </form>
+        <h2>Result: <span id="result"></span></h2>
+
+        <script>
+            function addNumbers() {
+                const num1 = parseFloat(document.getElementById('num1').value);
+                const num2 = parseFloat(document.getElementById('num2').value);
+                const sum = num1 + num2;
+                document.getElementById('result').textContent = sum;
+            }
+        </script>
+</html>
